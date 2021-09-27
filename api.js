@@ -23,7 +23,7 @@ const getClubs = async (
   console.log(request);
 
   const {
-    data: { clubs },
+    data: { clubs }
   } = await axios.get(request);
 
   return clubs;
@@ -40,7 +40,7 @@ const getBusinessUserByClub = async (clubName) => {
   let request = `https://nc-hobbyist.herokuapp.com/api/clubs/${clubName}/businessuser`;
 
   const {
-    data: { businessUser },
+    data: { businessUser }
   } = await axios.get(request);
 
   const userInfo = await getBusinessUser(businessUser.username);

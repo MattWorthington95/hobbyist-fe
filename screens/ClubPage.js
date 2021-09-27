@@ -5,7 +5,7 @@ import {
   View,
   Image,
   Button,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
 import { getBusinessUserByClub } from '../api';
 
@@ -56,7 +56,7 @@ export default function ClubPage({ navigation, route }) {
         style={{
           width: 200,
           flexDirection: 'row',
-          justifyContent: 'space-between',
+          justifyContent: 'space-between'
         }}
       >
         <Text
@@ -64,7 +64,7 @@ export default function ClubPage({ navigation, route }) {
             color: '#431275',
             fontSize: 15,
             textAlign: 'center',
-            marginTop: 20,
+            marginTop: 20
           }}
         >
           Category: {route.params.currentClub.clubType}
@@ -74,7 +74,7 @@ export default function ClubPage({ navigation, route }) {
             color: '#431275',
             fontSize: 15,
             textAlign: 'center',
-            marginTop: 20,
+            marginTop: 20
           }}
         >
           Price: {`£${route.params.currentClub.price}`}
@@ -86,7 +86,7 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 20,
           textAlign: 'center',
-          marginTop: 10,
+          marginTop: 10
         }}
       >
         About
@@ -96,7 +96,7 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 16,
           marginBottom: 20,
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >
         {route.params.currentClub.description}
@@ -106,7 +106,7 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 20,
           textAlign: 'center',
-          textTransform: 'capitalize',
+          textTransform: 'capitalize'
         }}
       >
         {openDay}
@@ -115,7 +115,7 @@ export default function ClubPage({ navigation, route }) {
         style={{
           color: '#431275',
           fontSize: 16,
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >{`Opening Time ${route.params.currentClub.hours[openDay].open}:00`}</Text>
       <Text
@@ -123,7 +123,7 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 16,
           textAlign: 'center',
-          marginBottom: 5,
+          marginBottom: 5
         }}
       >{`Closing Time ${route.params.currentClub.hours[openDay].close}:00`}</Text>
       <Text
@@ -131,7 +131,7 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 20,
           textAlign: 'center',
-          marginTop: 20,
+          marginTop: 20
         }}
       >
         Address
@@ -141,14 +141,14 @@ export default function ClubPage({ navigation, route }) {
           color: '#431275',
           fontSize: 16,
           textAlign: 'center',
-          marginBottom: 20,
+          marginBottom: 20
         }}
       >{` ${route.params.currentClub.address.firstLine}, ${route.params.currentClub.address.postcode}`}</Text>
       <View
         style={{
           width: 300,
           flexDirection: 'row',
-          justifyContent: 'space-between',
+          justifyContent: 'space-between'
         }}
       >
         <Text
@@ -156,7 +156,7 @@ export default function ClubPage({ navigation, route }) {
             color: '#431275',
             fontSize: 15,
             textAlign: 'center',
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           Age Group: {route.params.currentClub.ageGroup}
@@ -166,7 +166,7 @@ export default function ClubPage({ navigation, route }) {
             color: '#431275',
             fontSize: 15,
             textAlign: 'center',
-            marginBottom: 10,
+            marginBottom: 10
           }}
         >
           level: {`${route.params.currentClub.level}`}
@@ -175,7 +175,7 @@ export default function ClubPage({ navigation, route }) {
       <TouchableOpacity
         onPress={() =>
           navigation.navigate('BusinessPage', {
-            user,
+            user
           })
         }
       >
@@ -197,11 +197,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-start'
   },
   image: {
     width: '100%',
-    height: '30%',
+    height: '30%'
   },
   button: {
     flexDirection: 'row',
@@ -212,8 +212,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 5,
     paddingHorizontal: 10,
-    margin: 10,
-  },
+    margin: 10
+  }
 });
 
 // <Text
